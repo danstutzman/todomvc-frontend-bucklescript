@@ -17,7 +17,7 @@ let rootElement = React.strip_child (div [|
   h1 [|
     ul [|
       li [|
-        h2 [| React.String "James Nelson" |],
+        h2 ~className: "red" [| React.String "James Nelson" |],
         a ~href:"mailto:james@jamesknelson.com" [|
           React.String "james@jamesknelson.com"
         |]
