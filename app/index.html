@@ -6,6 +6,7 @@
 		<link rel="stylesheet" href="base.css">
 	</head>
 	<body>
+<!--
 		<section id="todoapp">
 			<header id="header">
 				<h1>todos</h1>
@@ -38,5 +39,24 @@
 			<p>Refactored by <a href="https://github.com/cburgmer">Christoph Burgmer</a></p>
 			<p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
 		</footer>
+-->
+
+    <div id='react-app'>render here</div>
+    <script src="https://npmcdn.com/react@15.3.1/dist/react.js"></script>
+    <script src="https://npmcdn.com/react-dom@15.3.1/dist/react-dom.js"></script>
+    <script>
+      function require(name) {
+        var lib = null;
+        if (name === 'react') { lib = window.React; }
+        else if (name === 'react-dom') { lib = window.ReactDOM; }
+        else { throw new Error("Unknown library '" + name + "'"); }
+
+        if (lib === null) {
+          throw new Error("Can't find global for library '" + name + "'");
+        }
+        return lib;
+      }
+    </script>
+    <script src="app.js"></script>
 	</body>
 </html>
